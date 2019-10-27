@@ -10,5 +10,13 @@
     "code-surfer": "3.0.0-beta.1",
     "mdx-deck": "3.0.13"
   },
-  "name": "mdx-presentation-starter"
+  "name": "mdx-presentation-starter",
+  "description": "Quick start an MDX presentation with code-surfer",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7"
+  }
 }
