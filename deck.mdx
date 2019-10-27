@@ -1,10 +1,6 @@
-import {
-  CodeSurfer,
-  CodeSurferColumns,
-  Step,
-} from "code-surfer";
-import { github, vsDark } from "@code-surfer/themes";
-import Intro from './components/Intro'
+import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
+import { github, vsDark } from '@code-surfer/themes';
+import Intro from './components/Intro';
 
 export const theme = github;
 
@@ -14,71 +10,98 @@ export const theme = github;
 
 <CodeSurfer>
 
-```js title="This is a title" subtitle="and this a subtitle"
-const test = () => {
-  console.log('test')
-}
-```
-
-```js
-const test = () => {
-  console.log('test')
-}
-
-function test2() {
-  return 'test2'
-}
-```
-
-```diff 1[1:20], 2[1:30], 5[1,10]
+```js 1,2[1,3:5,7],3
+console.log(1);
+console.log(2);
+console.log(3);
 ```
 
 </CodeSurfer>
 
 ---
 
-<CodeSurferColumns themes={[vsDark, github]}>
-
-<Step>
+<CodeSurfer>
 
 ```js
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
+console.log(4);
+console.log(5);
+console.log(6);
+```
+
+```js 1
+console.log(7);
+console.log(8);
+console.log(9);
 ```
 
 ```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```js 1 title="Title" subtitle="Look at the first line"
+console.log(1);
+console.log(2);
+console.log(3);
+```
+
+```js 2 title="Title" subtitle="and now the second"
+console.log(1);
+console.log(2);
+console.log(3);
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer theme={vsDark}>
+
+```js title="Different theme"
+console.log(1);
+console.log(2);
+console.log(3);
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurferColumns>
+
+<Step subtitle="First Step">
+
+```js
+console.log(1);
+console.log(2);
+```
+
+```js
+console.log('a');
+console.log('b');
 ```
 
 </Step>
 
-<Step>
+<Step subtitle="Second Step">
 
-```js
-const lorem = (ipsum, dolor, sit) => {
-  const amet = dolor - ipsum;
-  return consectetur.adipiscing(
-    {
-      elit: sed.eiusmod(sit - dolor) / amet + 2,
-    },
-    (tempor, incididunt) => ipsum + amet * incididunt
-  );
-};
-
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
+```js 2
+console.log(1);
+console.log(2);
 ```
 
-```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
-
-const sed = (eiusmod, tempor, incididunt) => {
-  const ut = tempor - eiusmod;
-  return labore.et(
-    {
-      amet: dolore.magna(incididunt - tempor) / ut + 2,
-    },
-    (aliqua, elit) => eiusmod + ut * elit
-  );
-};
+```js 2
+console.log('a');
+console.log('b');
 ```
 
 </Step>
